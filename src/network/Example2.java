@@ -13,6 +13,7 @@ public class Example2 {
             Socket clientSocket = new Socket("192.168.3.23",8888);
             PrintWriter printWriter = new PrintWriter(clientSocket.getOutputStream());
             String str="client Love server";
+
         } catch (IOException e) {
             e.printStackTrace();
         }
