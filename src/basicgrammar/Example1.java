@@ -1,6 +1,7 @@
 package basicgrammar;
 
 import java.io.InputStream;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -12,7 +13,10 @@ public class Example1 {
 //        fooBizBaz();
 //        System.out.println(getCount());
 //        unSure();
-          getHighScore(7);
+//          getHighScore(7);
+//        getArray();
+
+
     }
 
     /**
@@ -132,7 +136,23 @@ public class Example1 {
      (3)显示array1的内容。
      (4)赋值array2变量等于array1，修改array2中的偶索引元素，使其等于索引值(如array[0]=0,array[2]=2)。打印出array1。
      */
-    public void getArray(){
+    public static void getArray(){
+        TestArray testArray = new TestArray();
+        int a[]=testArray.getArray1();
+        System.out.println(Arrays.toString(a));
+
+        int a1[] =testArray.getArray1();
+        int a2[]=new int[a1.length];
+        System.arraycopy(a1,0,a2,0,a1.length);
+        for (int i = 0; i <a2.length; i++) {
+            if (i%2==0){
+                a2[i]=i;
+            }
+        }
+        System.out.println(Arrays.toString(a1));
+        System.out.println(Arrays.toString(a2));
+
+
 
     }
 }
