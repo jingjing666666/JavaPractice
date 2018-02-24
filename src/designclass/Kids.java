@@ -22,9 +22,11 @@ public class Kids extends ManKind {
     }
 
     public static void main(String[] args) {
-        Kids kid =new Kids(0,10000,18);
-        kid.employeed();
-        kid.manOrWoman();
+        String s ="今天有个猪";
+        System.out.println(s.length());
+//        Kids kid =new Kids(0,10000,18);
+//        kid.employeed();
+//        kid.manOrWoman();
     }
     public void setYearsOld(int yearsOld) {
         this.yearsOld = yearsOld;
