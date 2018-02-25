@@ -3,6 +3,9 @@ package basicgrammar;
 import java.io.InputStream;
 import java.util.Scanner;
 
+import static java.lang.Math.random;
+
+
 /**
  * Created by yuanqingjing on 2017/12/24
  */
@@ -11,9 +14,11 @@ public class Example1 {
 //        getScore();
 //        fooBizBaz();
 //        System.out.println(getCount());
-        unSure();
-
+//        unSure();
+        getHighScore(5);
+//          getRandom();
     }
+
 
     /**
      * 从键盘上读入一个学生成绩，
@@ -104,13 +109,40 @@ public class Example1 {
         int i1=0;
         int max =0;
         Scanner scanner = new Scanner(System.in);
-        while (scanner.hasNext()){
+        System.out.println("输入完成");
+        while (i1<score.length){
             score[i1] =scanner.nextInt();
+            System.out.println(score[i1]);
             if (score[i1]>max){
                 max=score[i1];
             }
             i1++;
 
         }
+        System.out.println(max);
+    }
+
+    /**
+     * 定义类Student，包含三个属性：学号number(int)，
+     * 年级state(int)，成绩score(int)。创建20个学生
+     * 对象，学号为1到20，年级和成绩都由随机数确定，
+     * 打印出3年级(state值为3）的学生信息。
+     * 提示：生成随机数：Math.randon() ，返回值类型double;
+     *四舍五入取整：Math.round()，返回值类型long。
+     */
+    public static void getRandom(){
+        Student students[] = new Student[20];
+        for (int i =0;i<students.length;i++){
+            Student student = new Student();
+            student.setNumber(i+1);
+//            System.out.println(Math.random());
+            student.setScore((int) (Math.random()*10));
+            student.setState((int)Math.round(Math.random()*10));
+            students[i]=student;
+        }
+        for (Student stu:students) {
+            System.out.println(stu);
+        }
+
     }
 }
