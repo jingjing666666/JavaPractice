@@ -1,6 +1,7 @@
 package basicgrammar;
 
 import java.io.InputStream;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -128,6 +129,7 @@ public class Example1 {
                 System.out.println("D");
             }
         }
+        System.out.println(max);
     }
 
     /**
@@ -150,7 +152,7 @@ public class Example1 {
                 a2[i]=i;
             }
         }
-        System.out.println(max);
+
     }
 
     /**
