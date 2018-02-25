@@ -1,12 +1,12 @@
 package basicgrammar;
 
 /**
- * Created by yuanqingjing on 2017/12/28
+ * Created by jingjing on 2017/12/25.
  */
 public class Student {
+    int score;
     int number;
     int state;
-    int score;
 
     public int getNumber() {
         return number;
@@ -25,16 +25,8 @@ public class Student {
     }
 
     public int getScore() {
-        return score;
-    }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "number=" + number +
-                ", state=" + state +
-                ", score=" + score +
-                '}';
+        return score;
     }
 
     public void setScore(int score) {

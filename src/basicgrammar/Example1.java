@@ -3,9 +3,6 @@ package basicgrammar;
 import java.io.InputStream;
 import java.util.Scanner;
 
-import static java.lang.Math.random;
-
-
 /**
  * Created by yuanqingjing on 2017/12/24
  */
@@ -15,10 +12,11 @@ public class Example1 {
 //        fooBizBaz();
 //        System.out.println(getCount());
 //        unSure();
-        getHighScore(5);
-//          getRandom();
-    }
+//          getHighScore(7);
+//        getArray();
 
+
+    }
 
     /**
      * 从键盘上读入一个学生成绩，
@@ -117,7 +115,40 @@ public class Example1 {
                 max=score[i1];
             }
             i1++;
+        }
+        System.out.println(max);
+        for (int j = 0; j <score.length ; j++) {
+            if (score[j]>=max-10){
+                System.out.println("A");
+            } else if (score[j]>=max-20&&score[j]<max-10){
+                System.out.println("B");
+            }else if (score[j]>=max-30&&score[j]<max-20){
+                System.out.println("C");
+            } else{
+                System.out.println("D");
+            }
+        }
+    }
 
+    /**
+     * 3.使用简单数组
+     (1)创建一个名为TestArray的类，在main()方法中声明array1和array2两个变量，他们是int[]类型的数组。
+     (2)使用大括号{}，把array1初始化为8个素数：2,3,5,7,11,13,17,19。
+     (3)显示array1的内容。
+     (4)赋值array2变量等于array1，修改array2中的偶索引元素，使其等于索引值(如array[0]=0,array[2]=2)。打印出array1。
+     */
+    public static void getArray(){
+        TestArray testArray = new TestArray();
+        int a[]=testArray.getArray1();
+        System.out.println(Arrays.toString(a));
+
+        int a1[] =testArray.getArray1();
+        int a2[]=new int[a1.length];
+        System.arraycopy(a1,0,a2,0,a1.length);
+        for (int i = 0; i <a2.length; i++) {
+            if (i%2==0){
+                a2[i]=i;
+            }
         }
         System.out.println(max);
     }
