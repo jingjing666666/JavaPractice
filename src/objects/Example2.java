@@ -34,6 +34,7 @@ public class Example2 {
         return j;
     }
     public  static  double max(double i,double j){
+
         if (i>j){
             return i;
         }

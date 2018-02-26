@@ -20,6 +20,7 @@ public class RedisJava {
      * 连接redis
      */
     public static void connectRedis(){
+
         //连接本地的 Redis 服务
         Jedis jedis = new Jedis("localhost");
         System.out.println("连接成功");
